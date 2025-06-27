@@ -1,0 +1,97 @@
+/* Global aspect */
+
+* {
+  box-sizing: border-box; /* permet de calculer les bordures dans les tailles affichées */
+}
+ /* THEME VERT
+:root {
+    --primary-color: #34cc26;
+    --secondary-color: #1fe743;
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: #4bb04b;
+    --background-color: #214e21;
+    --font-family: 'Inconsolata', monospace;
+}
+*/
+
+:root {
+    --primary-color: #34cc26;
+    --secondary-color: #1fe743;
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: #4bb04b;
+    --background-color: #454019;
+    --font-family: 'Inconsolata', monospace;
+}
+
+body {
+    background: var(--background-color);
+    background: radial-gradient(circle,var(--background-color) 0%, black 100%);
+    color: var(--primary-text-color);
+    text-shadow: 0 0 5px var(--secondary-color);
+    font: 1rem Inconsolata, monospace;
+    height: 100vh;
+    width: 100vw;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+::selection {
+  background: #0080FF;
+  text-shadow: none;
+}
+
+/* Generecis elements */
+
+h1, h2, p, li, form {
+  width: 75%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color:var(--secondary-text-color);
+    border: thick double var(--secondary-text-color);
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    width: 75%;
+    text-align: justify;
+    border: solid 1px var(--secondary-text-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* CLASS elements */
+
+
+
+/* ID elements */
