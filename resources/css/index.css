@@ -15,10 +15,10 @@
 */
 
 :root {
-    --primary-color: #34cc26;
-    --secondary-color: #1fe743;
+    --primary-color: #ccb626;
+    --secondary-color: #e7b21f;
     --primary-text-color: #FFFFFF;
-    --secondary-text-color: #4bb04b;
+    --secondary-text-color: #b0954b;
     --background-color: #454019;
     --font-family: 'Inconsolata', monospace;
 }
@@ -26,11 +26,14 @@
 body {
     background: var(--background-color);
     background: radial-gradient(circle,var(--background-color) 0%, black 100%);
+    background-size: cover;
     color: var(--primary-text-color);
     text-shadow: 0 0 5px var(--secondary-color);
     font: 1rem Inconsolata, monospace;
     height: 100vh;
-    width: 100vw;
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
 }
 
 body::after {
@@ -56,6 +59,10 @@ body::after {
 }
 
 /* Generecis elements */
+
+header {
+  grid-column: 1 / 3;
+}
 
 h1, h2, p, li, form {
   width: 75%;
